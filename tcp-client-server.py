@@ -9,7 +9,7 @@ redis_db = redis.StrictRedis(host=str(os.environ['REDIS_SERVICE_HOST']), port=st
 host_server = "0.0.0.0"
 port_server = 12341
 server.bind((host_server, port_server))
-url_addrs_json = eval(redis_db.get('MS-TCP-SERVER'))
+url_addrs_json = eval(redis_db.get('TCP-SERVER-MS'))
 url_addrs = str(url_addrs_json["12345"])
 client = socket.socket()
 addr = urlparse(url_addrs)
