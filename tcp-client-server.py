@@ -39,7 +39,7 @@ if c not in client_list:
 while True:
    buf= c.recv(1024)
    print buf
-   client.send("from Server:" + buf)
+   client.send(buf)
 
    continue
    c.close()
